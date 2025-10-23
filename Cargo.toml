@@ -1,0 +1,47 @@
+[package]
+name = "gprprotool"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A Text User Interface (TUI) application for converting GoPro .gpr image files to common formats"
+license = "MIT"
+repository = "https://github.com/yourusername/gprprotool"
+
+[dependencies]
+# TUI framework
+ratatui = "0.28"
+crossterm = "0.28"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# File system operations
+walkdir = "2.5"
+
+# Image processing (for conversion output)
+image = "0.25"
+
+# EXIF metadata handling
+kamadak-exif = "0.5"
+
+# Async runtime for better UX
+tokio = { version = "1.40", features = ["full"] }
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Serialization (for configuration)
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# C++ bindings support
+cc = "1.0"
+
+[build-dependencies]
+cc = "1.0"
+
+[[bin]]
+name = "gprprotool"
+path = "src/main.rs"
