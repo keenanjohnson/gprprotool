@@ -1,2 +1,12 @@
-# OSX Files
+# Generated files
+target/
+
+# Cargo.lock for libraries (optional, see notes below)
+# Cargo.lock
+
+# IDE and OS specific files
+.idea/
+.vscode/
+*.swp
 .DS_Store
+Thumbs.db
